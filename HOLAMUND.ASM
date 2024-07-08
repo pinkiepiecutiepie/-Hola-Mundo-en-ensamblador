@@ -1,23 +1,21 @@
-                 .model small
-                 .data
+.model small
+.data
 
-                 mensaje db 'Hola, mundo$'
-                                                                                            
-                 .code
-                 inicio:
+mensaje db 'Hola, mundo$'
 
-                 mov ax,@data
-                 mov ds,ax
+.code
+inicio:
 
-                 mov ah,09h
-                 mov dx,offset mensaje
+mov ax,@data
+mov ds,ax
 
-                 int 21h
+mov ah,09h
+mov dx,offset mensaje
 
-                 mov ax,4c00h
-                 int 21h
-                 .stack
+int 21h
 
-                 end inicio
+mov ax,4c00h
+int 21h
+.stack
 
-
+end inicio
